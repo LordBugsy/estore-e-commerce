@@ -11,7 +11,6 @@ const ProductInfo = () => {
         // scroll to the top of the page when the component mounts
         window.scrollTo(0, 0);
     }, [currentProduct]);
-    //how can I make it so the page scrolls to the top when the component mounts except when the cart is updated? => 
 
     return (
         <div className={styles.productInfoContainer}>
