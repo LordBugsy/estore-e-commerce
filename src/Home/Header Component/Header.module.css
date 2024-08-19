@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Tangsa:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+
+@keyframes slideLeft {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+:root {
+    --headerColour: rgb(47, 43, 43);
+}
+
+.slideLeft {
+    animation: slideLeft 0.3s ease-in-out both;
+}
+
+.slideRight {
+    animation: slideRight 0.3s ease-in-out both;
+}
+
+.headerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    z-index: 10;
+    background-color: var(--headerColour);
+    box-shadow: 0 1px 15px black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.header .left, .header .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: default;
+}
+
+.logo {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.2em;
+    margin: 5px;
+}
+
+.info {
+    cursor: pointer;
+}
+
+.searchContainer {
+    height: 50px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBox {
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 1.8em;
+}
+
+.searchBox::placeholder {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    font-size: 2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button.search {
+    background-color: rgb(204, 192, 64);
+}
+
+.button.search:hover {
+    background-color: rgb(162, 140, 28);
+}
+
+.icon {
+    font-size: 1.2em;
+}
+
+.headerTab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.headerTab .tab {
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.headerTab .info {
+    font-size: 1.8em;
+    margin-bottom: -20px;
+    transition: color 0.3s;
+}
+
+.headerTab:hover {
+    color: rgb(204, 192, 64);
+}
+
+.hidden {
+    position: absolute;
+    display: none;
+}
+
+/* hidden nav bar */
+.hiddenNavBar {
+    display: none;
+    color: white;
+    background-color: rgb(42, 32, 32);
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-top: 90px;
+
+    transform: translateX(100%);
+}
+
+.hiddenSearchContainer {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.hiddenNavBar .searchBox {
+   font-size: 1.5em; 
+   display: none;
+}
+
+.hiddenNavBar .button {
+    font-size: 1.5em;
+    display: none;
+}
+
+.info {
+    margin: 10px 0;
+    font-size: 1em;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.row .info {
+    font-size: 1.5em;
+}
+
+.navName, .logo {
+    cursor: pointer;
+}
+
+.selected {
+    color: seagreen;
+}
+
+@media only screen and (max-width: 950px) {
+    .responsive, .tab {
+        display: none;
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    .hiddenNavBar {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .searchContainer {
+        display: none;
+    }
+
+    .hiddenNavBar .searchBox {
+        display: block;
+    }
+    
+    .hiddenNavBar .button {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .hiddenSearchContainer, .searchBox {
+        width: 95%;
+    }
+
+    .searchBox {
+        padding: 0;
+        padding-left: 20px;
+    }     
+}

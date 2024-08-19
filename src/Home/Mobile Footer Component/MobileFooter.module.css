@@ -1,0 +1,44 @@
+:root {
+    --headerColour: rgb(47, 43, 43);
+}
+
+.mobileFooterContainer {
+    display: none;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    color: white;
+}
+
+.mobileFooter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--headerColour);
+}
+
+.icon {
+    font-size: 2em;
+    margin-bottom: -20px;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: -20px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.selected {
+    color: rgb(42, 116, 165);
+}
+
+@media only screen and (max-width: 950px) {
+    .mobileFooterContainer {
+        display: block;
+    }
+}

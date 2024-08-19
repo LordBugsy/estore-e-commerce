@@ -1,0 +1,90 @@
+.contactContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5em;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.text, .legalCompliance {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    text-align: center;
+    max-width: 90%;
+}
+
+.legalCompliance {
+    color: rgb(128, 127, 127);
+}
+
+.contactForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.link {
+    color: rgb(61, 210, 96);
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: rgb(26, 154, 56);
+}
+
+.input, .textarea {
+    border: 1px solid rgb(128, 127, 127);
+    border-radius: 5px;
+    padding: 0.5em;
+    outline: none;
+}
+
+.input {
+    width: 520px;
+}
+
+.textarea {
+    resize: none;
+    height: 280px;
+    width: 520px;
+}
+
+.submitButton {
+    background-color: rgb(61, 210, 96);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1.3em;
+    transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+    background-color: rgb(26, 154, 56);
+}
+
+@media only screen and (max-width: 950px) {
+    .submitButton {
+        font-size: 1.2em;
+    }
+
+    .formInput {
+        width: 90%;
+    }
+
+    .input, .textarea {
+        margin-left: 15px;
+        width: 90%;
+    }
+}
