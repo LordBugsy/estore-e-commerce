@@ -30,7 +30,7 @@ To run this project locally, follow these steps:
     ```
 
 ## License
-This project is licensed under the terms of the [MIT License](./LICENSE.txt). 
+This project is licensed under the terms of the [MIT License](./LICENCE.txt). 
 
 You are free to use, modify, and distribute this software for personal or educational purposes. However, selling or claiming ownership of this web app is prohibited.
 
